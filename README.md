@@ -1,17 +1,29 @@
+## What is Docker?
+
+
+## What is Image?
+
+
+## What is Container?
+
+
+
+
 ```shell
 $ npm i --save express
 ```
 
-Add this in ~/.bashrc file
+Add the following in ~/.bashrc file
 
 ```shell
 export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
 ```
+
+Run the following command to list the running container in list format
+
 ```shell
 $ docker ps --format=$FORMAT
 ```
-
-Use this command to list the running container in list format
 
 To run docker in a particular directory
 
@@ -40,9 +52,26 @@ Example
 $ docker run --name "service-api" -d -p 8080:8080 user-api-service:latest
 ```
 
+To list the images available on your system, run the following command
+
+```shell
+$ docker image ls
+```
+
+Building a Dockerfile, run the following command
+
+```shell
+$ docker build -t <name>:<tag> <destination of Dockerfile>
+```
+For example:
+
+```shell
+$ docker build -t user-api:latest .
+```
+The dot (.) indicates the current working directory.
+
 
 Using Caching after the dependencies have been finalized. Small changes would not take time to reflect.
 
 
 
-You will notice that some images are very large, for example image of node is approximately 900 MB large
