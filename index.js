@@ -3,10 +3,20 @@ const app = express()
 const port = 8080
 
 app.get('/', (req, res) => {
-    res.send([{
+  res.send([
+    {
         name: 'Hello',
         email:'asim@hello.com'
-  }])
+    },
+     {
+        name: 'Hello',
+        email:'asim@hello.com'
+    },
+     {
+        name: 'Hello',
+        email:'asim@hello.com'
+    }
+  ])
 })
 
 app.listen(port, () => {
