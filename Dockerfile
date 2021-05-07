@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:alpine
 # create a working directory inside our container 
 WORKDIR /app
 # Add package.json and package-lock.json to implement caching

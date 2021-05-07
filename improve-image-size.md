@@ -21,6 +21,12 @@ $ docker pull node:lts-alpine
 
 LTS=Long Term Support 
 
+or you can use
+
+```shell
+$ docker pull node:alpine
+```
+
 Now, check the images available on your system
 
 ```shell
@@ -28,5 +34,19 @@ $ docker image ls
 ```
 
 Here you can see that the alpine version of the node is approximately 75 MBs that is quite  a big reduction in image size as compared to the actual node image. And this is the reason, it will take seconds to download on your system.
+
+
+Now, lets pull the latest image of nginx (alpine version)
+
+```shell
+$ docker pull nginx:alpine
+```
+Now run the following command to see the details of images
+
+```shell
+$ docker image ls
+```
+
+Its almost 23 MBs.
 
 
